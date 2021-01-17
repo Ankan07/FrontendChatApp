@@ -10,7 +10,7 @@ function SignUp() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const ENDPOINT = "http://52.66.174.250:4000/";
+    const ENDPOINT = "http://65.1.11.198:4000/";
     const [displaytext, setdisplayText] = useState(false);
     const style = {
         backgroundColor: '#4caf50',

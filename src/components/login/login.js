@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from "react-router-dom";
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-const ENDPOINT = "http://52.66.174.250:4000";
+const ENDPOINT = "http://65.1.11.198:4000";
 function Login() {
     const history = useHistory();
 
