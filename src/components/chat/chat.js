@@ -7,7 +7,7 @@ import socketIOClient from "socket.io-client";
 import { computeHeadingLevel } from '@testing-library/react';
 import { useHistory } from 'react-router-dom';
 
-const ENDPOINT = "52.66.174.250:4000";
+const ENDPOINT = "http://52.66.174.250:4000";
 const socket = socketIOClient(ENDPOINT, {
     withCredentials: true,
 });

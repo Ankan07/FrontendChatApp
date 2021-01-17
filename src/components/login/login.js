@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from "react-router-dom";
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-const ENDPOINT = "52.66.174.250:4000";
+const ENDPOINT = "http://52.66.174.250:4000";
 function Login() {
     const history = useHistory();
 
@@ -12,6 +12,8 @@ function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const [displaytext, setdisplayText] = useState(false);
 
     const style = {
         backgroundColor: '#4caf50',
@@ -47,6 +49,7 @@ function Login() {
 
 
     const submit = async () => {
+        setdisplayText(true);
 
         var url = `${ENDPOINT}/v1/user/login`;
         var data = {
@@ -124,6 +127,13 @@ function Login() {
                             <div class="col l8 offset-l4">
 
                                 <a href="/signup">Go to Signup Page</a>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col l8 offset-l3">
+                                {displaytext == true ? <p>Please wait for Login ..</p> : ""}
                             </div>
 
                         </div>

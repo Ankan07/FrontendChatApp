@@ -10,7 +10,8 @@ function SignUp() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const ENDPOINT = "52.66.174.250:4000";
+    const ENDPOINT = "http://52.66.174.250:4000/";
+    const [displaytext, setdisplayText] = useState(false);
     const style = {
         backgroundColor: '#4caf50',
 
@@ -25,6 +26,8 @@ function SignUp() {
     }
 
     const submit = async () => {
+
+        setdisplayText(true);
 
         var url = `${ENDPOINT}v1/user`;
         var data = {
@@ -123,6 +126,13 @@ function SignUp() {
                             <div class="col l8 offset-l4">
 
                                 <a href="/login" style={{ marginLeft: '-5%' }}>Go to Login Page</a>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col l8 offset-l3">
+                                {displaytext == true ? <p>Please wait for an Email</p> : ""}
                             </div>
 
                         </div>
